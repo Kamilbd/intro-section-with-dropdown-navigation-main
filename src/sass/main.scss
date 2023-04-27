@@ -1,0 +1,199 @@
+@use 'utilities/index' as u;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 18px;
+	font-family: 'Space Grotesk', sans-serif;
+}
+.nav {
+	display: flex;
+	align-items: center;
+	padding: 1em 0;
+	height: 8vh;
+	z-index: 9999;
+	&__link {
+		padding: 0.4em 0;
+		font-size: 1rem;
+		text-decoration: none;
+		color: u.$Gray;
+		transition: color 0.3s;
+		&--register {
+			padding: 0.4em 0.8em;
+			border-radius: 15px;
+			border: 3px solid rgb(0, 0, 0);
+		}
+	}
+	&__link:hover {
+		color: u.$Black;
+	}
+	&__head-mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-left: 1em;
+		width: 100%;
+	}
+	&__icon-nav-logo {
+		width: 90px;
+	}
+	&__links {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		padding-left: 0.6em;
+		width: 50%;
+		height: 100vh;
+		background-color: u.$White;
+		transform: translateX(100%);
+		transition: transform 0.3s;
+		overflow: scroll;
+		z-index: 5;
+	}
+	&__active-menu {
+		transform: translateX(0);
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+	}
+	&__position-mobile-btn {
+		text-align: right;
+	}
+	&__btn-close,
+	&__btn-menu {
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	&__img-close,
+	&__img-menu {
+		padding: 2em;
+	}
+	&__btn-features,
+	&__btn-company {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.4em 0em;
+		width: 90px;
+		color: u.$Gray;
+		font-size: 1rem;
+		background: none;
+		border: none;
+		transition: color 0.3s;
+		cursor: pointer;
+	}
+	&__btn-features:hover,
+	&__btn-company:hover {
+		color: u.$Black;
+	}
+	&__features-links,
+	&__company-links {
+		display: none;
+		flex-direction: column;
+		font-size: 2rem;
+		margin-left: 0.4em;
+		padding: 0.4em 0;
+		background-color: u.$White;
+		z-index: 5;
+	}
+	&__active-links {
+		display: flex;
+	}
+	&__features-links &__link,
+	&__company-links &__link {
+		font-size: 0.8rem;
+	}
+	&__arrow-icon {
+		transform: rotate(0);
+		transition: rotate 0.3s;
+	}
+	&__arrow-icon-active {
+		transform: rotate(180deg);
+	}
+	&__icon-nav {
+		margin-right: 1em;
+	}
+	&__log {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1em;
+		width: 100%;
+		align-items: center;
+	}
+	&__shadow {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: #00000048;
+		z-index: 0;
+	}
+}
+.header {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	text-align: center;
+	margin-top: 1em;
+
+	overflow: hidden;
+	&__text-section {
+		padding: 1em 0.4em;
+		max-width: 500px;
+	}
+	&__title {
+		padding: 0.8em 0;
+		font-size: 1.6rem;
+	}
+	&__text {
+		color: u.$Gray;
+		font-size: 0.8rem;
+	}
+	&__btn {
+		margin: 2em 0;
+		padding: 1em 2em;
+		background-color: u.$Black;
+		color: u.$White;
+		font-size: 1rem;
+		font-weight: bold;
+		border: 3px solid u.$Black;
+		border-radius: 20px;
+		transition: background-color 0.3s, color 0.3s;
+		cursor: pointer;
+	}
+	&__sponsors {
+		display: flex;
+		justify-content: center;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__img-sponsor {
+		margin-top: 1em;
+		padding: 0 0.4em;
+		width: 60px;
+	}
+	&__img {
+		width: 100%;
+		max-width: 600px;
+		height: 200px;
+		background-image: url('../img/image-hero-mobile.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
+@include u.small;
+@include u.large;
