@@ -1,0 +1,120 @@
+@mixin large {
+	@media screen and (min-width: 1200px) {
+		.nav {
+			height: 10vh;
+			&__head-mobile {
+				width: 10%;
+				z-index: 5;
+			}
+			&__icon-nav-logo {
+				margin-top: 0.4em;
+				margin-left: 2em;
+				width: 100px;
+			}
+			&__links {
+				display: flex;
+				position: relative;
+				justify-content: space-between;
+				background: none;
+				height: 8vh;
+				width: 100%;
+				font-size: 1.2rem;
+				transform: translateX(0);
+				overflow: visible;
+			}
+			&__link {
+				padding: 0 2em;
+				&--register {
+					padding: 0.5em 2em;
+				}
+			}
+			&__box {
+				flex-direction: row;
+				align-items: center;
+				width: 100%;
+			}
+			&__btn-close,
+			&__btn-menu {
+				display: none;
+			}
+			&__arrow-icon {
+				width: 15px;
+			}
+			&__btn-features,
+			&__btn-company {
+				width: 105px;
+				margin: 0 1em;
+				font-size: 1.2rem;
+			}
+			&__features-links,
+			&__company-links {
+				position: absolute;
+				padding: 0.4em;
+				border-radius: 8px;
+				box-shadow: -3px 28px 52px -8px rgba(0, 0, 0, 0.43);
+			}
+			&__features-links {
+				transform: translate(-40%, 5%);
+			}
+			&__company-links {
+				transform: translate(15%, 5%);
+			}
+			&__features-links &__link,
+			&__company-links &__link {
+				font-size: 1.2rem;
+				padding: 0.4em 1em;
+			}
+			&__log {
+				flex-direction: row;
+				justify-content: flex-end;
+				margin: 0 4em;
+			}
+			&__shadow {
+				display: none;
+			}
+		}
+		.header {
+			flex-direction: row;
+			justify-content: center;
+			justify-content: space-evenly;
+			margin-top: 3em;
+
+			&__text-section {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				padding-bottom: 0;
+				text-align: left;
+				max-width: 600px;
+				height: 700px;
+			}
+			&__title {
+				margin-top: 0.1em;
+				padding-right: 0.6em;
+				padding-bottom: 0;
+				font-size: 5.4rem;
+			}
+			&__text {
+				padding-left: 0;
+				padding-right: 5em;
+				font-size: 1.2rem;
+			}
+			&__btn {
+				margin: 2em 0;
+				width: 30%;
+				max-width: 375px;
+			}
+			&__btn:hover {
+				background-color: rgb(255, 255, 255);
+				color: rgb(7, 7, 7);
+			}
+			&__img-sponsor {
+				width: 100px;
+			}
+			&__img {
+				background-image: url('../img/image-hero-desktop.png');
+				height: 700px;
+			}
+		}
+	}
+}

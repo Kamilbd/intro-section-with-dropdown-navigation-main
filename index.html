@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Intro section with dropdown navigation</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="/src/css/main.css" />
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav__head-mobile">
+				<a class="nav__home" href="#"> <img class="nav__icon-nav-logo" src="./src/img/logo.svg" alt="" /></a>
+				<button class="nav__btn-menu">
+					<img class="nav__img-menu" src=".//dist/img/icon-menu.svg" alt="button burger menu" />
+				</button>
+			</div>
+
+			<div class="nav__links">
+				<div class="nav__box">
+					<div class="nav__position-mobile-btn">
+						<button class="nav__btn-close">
+							<img class="nav__img-close" src="./dist/img/icon-close-menu.svg" alt="button close" />
+						</button>
+					</div>
+
+					<div class="nav__features nav__burger-mobile-btns">
+						<button class="nav__btn-features">
+							Features <img class="nav__arrow-icon" src="./src/img/icon-arrow-down.svg" alt="" />
+						</button>
+						<div class="nav__features-links">
+							<a href="#" class="nav__link"
+								><img class="nav__icon-nav" src="./src/img/icon-todo.svg" alt="icon todo" /> Todo List</a
+							>
+							<a href="#" class="nav__link"
+								><img class="nav__icon-nav" src="./src/img/icon-calendar.svg" alt="icon calendar" /> Calendar</a
+							>
+							<a href="#" class="nav__link"
+								><img class="nav__icon-nav" src="./src/img/icon-reminders.svg" alt="icon reminders" /> Reminders</a
+							>
+							<a href="#" class="nav__link"
+								><img class="nav__icon-nav" src="./src/img/icon-planning.svg" alt="icon planning" /> Planning</a
+							>
+						</div>
+					</div>
+
+					<div class="nav__company nav__burger-mobile-btns">
+						<button class="nav__btn-company">
+							Company <img class="nav__arrow-icon" src="./src/img/icon-arrow-down.svg" alt="" />
+						</button>
+						<div class="nav__company-links">
+							<a href="#" class="nav__link">History</a>
+							<a href="#" class="nav__link">Our Team</a>
+							<a href="#" class="nav__link">Blog</a>
+						</div>
+					</div>
+
+					<a href="#" class="nav__link">Careers</a>
+					<a href="#" class="nav__link">About</a>
+				</div>
+				<div class="nav__log">
+					<a class="nav__link nav__link--login" href="#">Login</a>
+					<a class="nav__link nav__link--register" href="#">Register</a>
+				</div>
+			</div>
+			<div class="nav__shadow"></div>
+		</nav>
+		<main>
+			<header class="header">
+				<div class="header__text-section">
+					<h1 class="header__title">Make remote work</h1>
+					<p class="header__text">
+						Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+						productivity soar.
+					</p>
+					<button class="header__btn">Learn more</button>
+					<div class="header__sponsors">
+						<img class="header__img-sponsor" src="./dist/img/client-databiz.svg" alt="" />
+						<img class="header__img-sponsor" src="./dist/img/client-audiophile.svg" alt="" />
+						<img class="header__img-sponsor" src="./dist/img/client-meet.svg" alt="" />
+						<img class="header__img-sponsor" src="./dist/img/client-maker.svg" alt="" />
+					</div>
+				</div>
+				<div class="header__img"></div>
+			</header>
+		</main>
+		<script src="/src/js/main.js"></script>
+	</body>
+</html>

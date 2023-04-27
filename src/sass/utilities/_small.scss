@@ -1,0 +1,39 @@
+@mixin small {
+	@media screen and (min-width: 375px) {
+		.nav {
+			&__link {
+				font-size: 1.2rem;
+			}
+			&__links {
+				padding-left: 1em;
+			}
+			&__btn-features,
+			&__btn-company {
+				padding: 0.4em 0em;
+				font-size: 1.2rem;
+				width: 110px;
+			}
+			&__features-links &__link,
+			&__company-links &__link {
+				padding-left: 1em;
+				font-size: 1rem;
+			}
+		}
+		.header {
+			justify-content: space-between;
+			&__title {
+				font-size: 2.2rem;
+			}
+			&__text {
+				padding: 0 1em;
+				font-size: 1rem;
+			}
+			&__img-sponsor {
+				width: 80px;
+			}
+			&__img {
+				height: 300px;
+			}
+		}
+	}
+}

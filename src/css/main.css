@@ -1,0 +1,336 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  height: 8vh;
+  z-index: 9999;
+}
+.nav__link {
+  padding: 0.4em 0;
+  font-size: 1rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  transition: color 0.3s;
+}
+.nav__link--register {
+  padding: 0.4em 0.8em;
+  border-radius: 15px;
+  border: 3px solid rgb(0, 0, 0);
+}
+.nav__link:hover {
+  color: hsl(0, 0%, 8%);
+}
+.nav__head-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1em;
+  width: 100%;
+}
+.nav__icon-nav-logo {
+  width: 90px;
+}
+.nav__links {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 0.6em;
+  width: 50%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  overflow: scroll;
+  z-index: 5;
+}
+.nav__active-menu {
+  transform: translateX(0);
+}
+.nav__box {
+  display: flex;
+  flex-direction: column;
+}
+.nav__position-mobile-btn {
+  text-align: right;
+}
+.nav__btn-close, .nav__btn-menu {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.nav__img-close, .nav__img-menu {
+  padding: 2em;
+}
+.nav__btn-features, .nav__btn-company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4em 0em;
+  width: 90px;
+  color: hsl(0, 0%, 41%);
+  font-size: 1rem;
+  background: none;
+  border: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.nav__btn-features:hover, .nav__btn-company:hover {
+  color: hsl(0, 0%, 8%);
+}
+.nav__features-links, .nav__company-links {
+  display: none;
+  flex-direction: column;
+  font-size: 2rem;
+  margin-left: 0.4em;
+  padding: 0.4em 0;
+  background-color: hsl(0, 0%, 98%);
+  z-index: 5;
+}
+.nav__active-links {
+  display: flex;
+}
+.nav__features-links .nav__link, .nav__company-links .nav__link {
+  font-size: 0.8rem;
+}
+.nav__arrow-icon {
+  transform: rotate(0);
+  transition: rotate 0.3s;
+}
+.nav__arrow-icon-active {
+  transform: rotate(180deg);
+}
+.nav__icon-nav {
+  margin-right: 1em;
+}
+.nav__log {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  width: 100%;
+  align-items: center;
+}
+.nav__shadow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2823529412);
+  z-index: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  margin-top: 1em;
+  overflow: hidden;
+}
+.header__text-section {
+  padding: 1em 0.4em;
+  max-width: 500px;
+}
+.header__title {
+  padding: 0.8em 0;
+  font-size: 1.6rem;
+}
+.header__text {
+  color: hsl(0, 0%, 41%);
+  font-size: 0.8rem;
+}
+.header__btn {
+  margin: 2em 0;
+  padding: 1em 2em;
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  font-size: 1rem;
+  font-weight: bold;
+  border: 3px solid hsl(0, 0%, 8%);
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.header__sponsors {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__img-sponsor {
+  margin-top: 1em;
+  padding: 0 0.4em;
+  width: 60px;
+}
+.header__img {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  background-image: url("../img/image-hero-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 375px) {
+  .nav__link {
+    font-size: 1.2rem;
+  }
+  .nav__links {
+    padding-left: 1em;
+  }
+  .nav__btn-features, .nav__btn-company {
+    padding: 0.4em 0em;
+    font-size: 1.2rem;
+    width: 110px;
+  }
+  .nav__features-links .nav__link, .nav__company-links .nav__link {
+    padding-left: 1em;
+    font-size: 1rem;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .header__title {
+    font-size: 2.2rem;
+  }
+  .header__text {
+    padding: 0 1em;
+    font-size: 1rem;
+  }
+  .header__img-sponsor {
+    width: 80px;
+  }
+  .header__img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav {
+    height: 10vh;
+  }
+  .nav__head-mobile {
+    width: 10%;
+    z-index: 5;
+  }
+  .nav__icon-nav-logo {
+    margin-top: 0.4em;
+    margin-left: 2em;
+    width: 100px;
+  }
+  .nav__links {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background: none;
+    height: 8vh;
+    width: 100%;
+    font-size: 1.2rem;
+    transform: translateX(0);
+    overflow: visible;
+  }
+  .nav__link {
+    padding: 0 2em;
+  }
+  .nav__link--register {
+    padding: 0.5em 2em;
+  }
+  .nav__box {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  .nav__btn-close, .nav__btn-menu {
+    display: none;
+  }
+  .nav__arrow-icon {
+    width: 15px;
+  }
+  .nav__btn-features, .nav__btn-company {
+    width: 105px;
+    margin: 0 1em;
+    font-size: 1.2rem;
+  }
+  .nav__features-links, .nav__company-links {
+    position: absolute;
+    padding: 0.4em;
+    border-radius: 8px;
+    box-shadow: -3px 28px 52px -8px rgba(0, 0, 0, 0.43);
+  }
+  .nav__features-links {
+    transform: translate(-40%, 5%);
+  }
+  .nav__company-links {
+    transform: translate(15%, 5%);
+  }
+  .nav__features-links .nav__link, .nav__company-links .nav__link {
+    font-size: 1.2rem;
+    padding: 0.4em 1em;
+  }
+  .nav__log {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 4em;
+  }
+  .nav__shadow {
+    display: none;
+  }
+  .header {
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 3em;
+  }
+  .header__text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+    text-align: left;
+    max-width: 600px;
+    height: 700px;
+  }
+  .header__title {
+    margin-top: 0.1em;
+    padding-right: 0.6em;
+    padding-bottom: 0;
+    font-size: 5.4rem;
+  }
+  .header__text {
+    padding-left: 0;
+    padding-right: 5em;
+    font-size: 1.2rem;
+  }
+  .header__btn {
+    margin: 2em 0;
+    width: 30%;
+    max-width: 375px;
+  }
+  .header__btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(7, 7, 7);
+  }
+  .header__img-sponsor {
+    width: 100px;
+  }
+  .header__img {
+    background-image: url("../img/image-hero-desktop.png");
+    height: 700px;
+  }
+}/*# sourceMappingURL=main.css.map */
